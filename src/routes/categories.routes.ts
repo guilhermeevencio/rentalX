@@ -12,6 +12,7 @@ categoriesRoutes.post('/', (request, response) => {
     id: uuidv4(),
     name,
     description,
+    created_at: new Date(),
   };
   categories.push(category);
   return response.status(201).send();
